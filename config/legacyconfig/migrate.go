@@ -7,7 +7,7 @@ import (
 	"strings"
 
 	"github.com/ghodss/yaml"
-	"github.com/loft-sh/vcluster/config"
+	"github.com/loft-sh/vcluster-config/config"
 )
 
 func MigrateLegacyConfig(distro, oldValues string) (string, error) {

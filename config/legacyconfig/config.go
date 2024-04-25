@@ -1,6 +1,6 @@
 package legacyconfig
 
-import "github.com/loft-sh/vcluster/config"
+import "github.com/loft-sh/vcluster-config/config"
 
 type LegacyK0sAndK3s struct {
 	BaseHelm
