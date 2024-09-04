@@ -2,10 +2,11 @@ package config
 
 import (
 	"fmt"
-	"github.com/blang/semver"
 	"regexp"
 	"strconv"
 	"strings"
+
+	"github.com/blang/semver"
 )
 
 const (
@@ -192,6 +193,9 @@ func applyK8SExtraValues(vConfig *Config, options *ExtraValuesOptions, chartVers
 
 	// build values
 	k8sVersion, err := getK8sVersion(chartVersion, apiImage)
+	if err != nil {
+		return err
+	}
 	vConfig.ControlPlane.Distro.K8S.Version = k8sVersion
 
 	if etcdImage != "" {
