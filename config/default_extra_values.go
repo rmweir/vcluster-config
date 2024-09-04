@@ -77,7 +77,7 @@ var vclusterVersionsWithK8sVersionSupport []semver.Version
 
 func init() {
 	vclusterVersionsWithK8sVersionSupport = []semver.Version{
-		semver.MustParse("1.20.0-beta.10"),
+		semver.MustParse("1.20.0-beta.16"),
 		semver.MustParse("1.20.0-alpha.99"),
 		semver.MustParse("1.21.0-alpha.4"),
 	}
