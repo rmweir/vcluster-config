@@ -2,11 +2,10 @@ package config
 
 import (
 	"fmt"
+	"github.com/blang/semver"
 	"regexp"
 	"strconv"
 	"strings"
-
-	"github.com/blang/semver"
 )
 
 const (
@@ -109,7 +108,7 @@ func GetExtraValues(options *ExtraValuesOptions, chartVersion string) (string, e
 		return "", err
 	}
 
-	toConfig, err := getExtraValues(options, "")
+	toConfig, err := getExtraValues(options, chartVersion)
 	if err != nil {
 		return "", fmt.Errorf("get extra values: %w", err)
 	}
